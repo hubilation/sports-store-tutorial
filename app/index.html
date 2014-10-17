@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="sportsStore">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>SportsStore</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/bootstrap-css/css/bootstrap.css">
+  <link rel="stylesheet" href="bower_components/bootstrap-css/css/bootstrap-theme.css">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body ng-controller="sportsStoreCtrl">
+
+    <div class="navbar navbar-inverse">
+        <a class="navbar-brand" href="#">SPORTS STORE</a>
+    </div>
+
+    <div class="alert alert-danger" ng-show="data.error">
+        Error ({{data.error.status}}). The product data was not loaded.
+        <a href="index.html" class="alert-link">Click here to try again</a>
+    </div>
+
+    <ng-include src="'views/productList.html'"></ng-include>
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="app.js"></script>
+  <script src="filters/customFilters.js"></script>
+
+  <script src="controllers/sportsStore.js"></script>
+  <script src="controllers/productListControllers.js"></script>
+  <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>
+</body>
+</html>
