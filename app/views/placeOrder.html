@@ -33,7 +33,7 @@
                 <div class="form-group">
                     <label>City</label>
                     <input name="city" class="form-control"
-                           ng-modl="data.shipping.city" required/>
+                           ng-model="data.shipping.city" required/>
                     <span class="error" ng-show="shippingForm.city.$error.required">
                         Please enter a city
                     </span>
@@ -42,7 +42,7 @@
                 <div class="form-group">
                     <label>State</label>
                     <input name="state" class="form-control"
-                           ng-modl="data.shipping.state" required/>
+                           ng-model="data.shipping.state" required/>
                     <span class="error" ng-show="shippingForm.state.$error.required">
                         Please enter a state
                     </span>
@@ -51,7 +51,7 @@
                 <div class="form-group">
                     <label>Zip</label>
                     <input name="zip" class="form-control"
-                           ng-modl="data.shipping.zip" required/>
+                           ng-model="data.shipping.zip" required/>
                     <span class="error" ng-show="shippingForm.zip.$error.required">
                         Please enter a zip code
                     </span>
@@ -60,7 +60,7 @@
                 <div class="form-group">
                     <label>Country</label>
                     <input name="country" class="form-control"
-                           ng-modl="data.shipping.country" required/>
+                           ng-model="data.shipping.country" required/>
                     <span class="error" ng-show="shippingForm.country.$error.required">
                         Please enter a country
                     </span>
@@ -77,6 +77,7 @@
 
                 <div class="text-center">
                     <button ng-disabled="shippingForm.$invalid"
+                            ng-click="sendOrder(data.shipping)"
                             class="btn btn-primary">Complete order</button>
                 </div>
             </div>
